@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { Physics } from '@react-three/cannon'
+import { Sky } from '@react-three/drei'
+import { Canvas } from '@react-three/fiber'
+import Ground from './components/Ground'
+import Player from './components/Player'
+import FPV from './components/FPV'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Canvas>
+        <Sky sunPosition={[10, 100, 20]} />
+        <ambientLight intensity={0.5} />
+        <FPV />
+        <Physics>
+          <Player />
+          <Ground />
+        </Physics>
+      </Canvas>
+      <div className='cursor'>+</div>
+    </>
+  )
 }
 
-export default App;
+export default App
