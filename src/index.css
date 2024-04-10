@@ -76,4 +76,19 @@ body > iframe {
   position: absolute;
   top: 30px;
   left: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.tips {
+  background-color: white;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tips p {
+  margin: 0;
+  font-size: 18px;
 }
