@@ -27,6 +27,10 @@ body {
   font-size: 40px;
 }
 
+body > iframe {
+  display: none;
+}
+
 .cursor {
   position: absolute;
   color: white;
