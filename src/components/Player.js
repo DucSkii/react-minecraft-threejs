@@ -4,21 +4,17 @@ import { useSphere } from '@react-three/cannon'
 import { Vector3 } from 'three'
 import useKeyboard from '../hooks/useKeyboard'
 
-const JUMP_FORCE = 3
+const JUMP_FORCE = 5
 const WALK_SPEED = 3
 
 const Player = () => {
   const actions = useKeyboard()
-  console.log(
-    'actions',
-    Object.entries(actions).filter(([k, v]) => v)
-  )
 
   const { camera } = useThree()
   const [ref, api] = useSphere(() => ({
     mass: 1,
     type: 'Dynamic',
-    position: [0, 1, 0],
+    position: [0, 0.5, 0],
   }))
 
   const vel = useRef([0, 0, 0])

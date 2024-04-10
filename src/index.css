@@ -34,3 +34,42 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.textureSelector {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0px 15px 30px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+
+.textureSelector p {
+  font-size: 28px;
+}
+
+.textureSelector > .cubes > img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  padding: 5px;
+}
+
+.cubes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.overlay {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
